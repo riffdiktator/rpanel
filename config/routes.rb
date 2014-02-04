@@ -1,7 +1,6 @@
 Rpanel::Application.routes.draw do
 
-  get "pages/index"
-  devise_for :users
+  devise_for :user, :path => 'admin', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
   root "pages#index"
 
