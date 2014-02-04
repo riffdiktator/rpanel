@@ -17,11 +17,12 @@
 development:
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  database: rpanel_development
   pool: 5
-  username: rpanel
-  password: rpanel
+  database: dbtiiueo6rb76b
+  username: afwgreeknwlpri
+  password: nIoeKEu-IcjKGhO0UzacOUxrZV
+  host: ec2-107-21-226-77.compute-1.amazonaws.com
+  port: 5432
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -47,17 +48,19 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  database: rpanel_test
   pool: 5
-  username: rpanel
-  password: rpanel
+  database: dbtiiueo6rb76b
+  username: afwgreeknwlpri
+  password: nIoeKEu-IcjKGhO0UzacOUxrZV
+  host: ec2-107-21-226-77.compute-1.amazonaws.com
+  port: 5432
 
 production:
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  database: rpanel_production
   pool: 5
-  username: rpanel
-  password: rpanel
+  database: dbtiiueo6rb76b
+  username: afwgreeknwlpri
+  password: nIoeKEu-IcjKGhO0UzacOUxrZV
+  host: ec2-107-21-226-77.compute-1.amazonaws.com
+  port: 5432
