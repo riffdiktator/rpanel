@@ -1,10 +1,11 @@
 <h1>Nowa podstrona</h1>
+<%= form_for :page, url: admin_pages_path do |f| %>
 <div class="row">
-	<input class="form-control input-lg" type="text" placeholder="Tytuł podstrony">
+	<%= f.text_field :title, :class => "form-control input-lg", :placeholder => "Tytuł podstrony" %>
 </div>
 <div class="row">
 	<div class="col-md-8 col-lg-8">
-		<textarea class="tinymce"></textarea>
+		<%= f.text_area :text, :class => "tinymce" %>
 	</div>
 	<div class="col-md-4">
 		opcje
@@ -12,5 +13,7 @@
 </div>
 <div class="row">
 	<button class="btn btn-success pull-right" type="submit"><i class="fa fa-floppy-o"></i> Zapisz</button>
+	
 	<a href="" class="btn btn-default pull-right"><i class="fa fa-reply"></i> Poniechaj</a>
 </div>
+<% end %>
