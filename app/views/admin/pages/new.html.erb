@@ -1,19 +1,35 @@
-<h1>Nowa podstrona</h1>
+
 <%= form_for :page, url: admin_pages_path do |f| %>
-<div class="row">
-	<%= f.text_field :title, :class => "form-control input-lg", :placeholder => "Tytuł podstrony" %>
-</div>
-<div class="row">
-	<div class="col-md-8 col-lg-8">
-		<%= f.text_area :text, :class => "tinymce" %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Dodaj nową podstronę</h3>
+  </div>
+
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-12">
+			<%= f.text_field :title, :class => "form-control input-lg", :placeholder => "Tytuł podstrony" %>
+		</div>
 	</div>
-	<div class="col-md-4">
-		opcje
+	<div class="row newPageMain">
+		<div class="col-md-8 col-lg-8">
+			<%= f.text_area :text, :class => "tinymce" %>
+		</div>
+		<div class="col-md-4">
+			opcje
+		</div>
 	</div>
 </div>
-<div class="row">
-	<button class="btn btn-success pull-right" type="submit"><i class="fa fa-floppy-o"></i> Zapisz</button>
-	
-	<a href="" class="btn btn-default pull-right"><i class="fa fa-reply"></i> Poniechaj</a>
+<div class="panel-footer">
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-success pull-right submitPage" type="submit"><i class="fa fa-floppy-o"></i> Zapisz</button>
+
+			<a href="" class="btn btn-default pull-right"><i class="fa fa-reply"></i> Poniechaj</a>
+		</div>
+	</div>
+</div>
+
 </div>
 <% end %>
