@@ -19,7 +19,8 @@
         <% @pages.each_with_index do |page, index| %>
           <tr>
             <td class="lp"><%= index+1 %></td>
-            <td><%= link_to page.title, edit_admin_page_url(page) %></td>
+            <td><%= link_to page.title, edit_admin_page_url(page), :class => "btn" %></td>
+            <td class="in_menu"><% if page.in_menu %> <span class="btn"><i class="fa fa-list"></i></span> <% end %></td>
             <td class="actions">
               <%= link_to(edit_admin_page_url(page), :class => "btn btn-success btn-sm") do %>
                 <i class="fa fa-pencil-square-o"></i>

@@ -26,11 +26,7 @@ class Admin::PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     @page.update(page_params)
-    if page_params[:save_and_leave]==1
-      redirect_to admin_pages_url
-    else
-      redirect_to edit_admin_page_url(@page)
-    end
+    redirect_to admin_pages_url
   end
 
   private
