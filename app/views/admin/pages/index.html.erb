@@ -16,60 +16,19 @@
   <!-- List group -->
 <table class="table table-hover table-condensed table-bordered PagesList">
         <tbody>
+        <% @pages.each_with_index do |page, index| %>
           <tr>
-            <td class="lp">1</td>
-            <td><a href="">Jakiś tam link</a></td>
+            <td class="lp"><%= index+1 %></td>
+            <td><%= link_to page.title, edit_admin_page_url(page) %></td>
             <td class="actions">
-            	<a class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o"></i></a>
+              <%= link_to(edit_admin_page_url(page), :class => "btn btn-success btn-sm") do %>
+                <i class="fa fa-pencil-square-o"></i>
+              <% end %>
             	<a class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
             	<a class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
             </td>
           </tr>
-          <tr>
-            <td class="lp">1</td>
-            <td><a href="">Jakiś tam link</a></td>
-            <td class="actions">
-            	<a class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o"></i></a>
-            	<a class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-            	<a class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <td class="lp">1</td>
-            <td><a href="">Jakiś tam link</a></td>
-            <td class="actions">
-            	<a class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o"></i></a>
-            	<a class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-            	<a class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <td class="lp">1</td>
-            <td><a href="">Jakiś tam link</a></td>
-            <td class="actions">
-            	<a class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o"></i></a>
-            	<a class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-            	<a class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <td class="lp">1</td>
-            <td><a href="">Jakiś tam link</a></td>
-            <td class="actions">
-            	<a class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o"></i></a>
-            	<a class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-            	<a class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <td class="lp">1</td>
-            <td><a href="">Jakiś tam link</a></td>
-            <td class="actions">
-            	<a class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o"></i></a>
-            	<a class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
-            	<a class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
-            </td>
-          </tr>
+        <% end %>
         </tbody>
       </table>
 </div>

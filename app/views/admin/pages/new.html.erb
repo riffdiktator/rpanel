@@ -17,16 +17,24 @@
 			<%= f.text_area :text, :class => "tinymce" %>
 		</div>
 		<div class="col-md-4">
-			opcje
+			<div class="checkbox">
+			<label>
+				<%= f.check_box :in_menu %> Dodaj do menu strony
+			</label>
+			</div>
 		</div>
 	</div>
 </div>
 <div class="panel-footer">
 	<div class="row">
 		<div class="col-md-12">
+
+
 			<button class="btn btn-success pull-right submitPage" type="submit"><i class="fa fa-floppy-o"></i> Zapisz</button>
 
-			<a href="" class="btn btn-default pull-right"><i class="fa fa-reply"></i> Poniechaj</a>
+			<%= link_to(admin_pages_path, :class => "btn btn-default pull-right") do %>
+			<i class="fa fa-reply"></i> Poniechaj
+			<% end %>
 		</div>
 	</div>
 </div>
