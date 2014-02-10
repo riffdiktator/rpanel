@@ -11,6 +11,24 @@
  *= require bootstrap.min
  *= require font-awesome
  *= require_self
- *= require_tree .
  */
+ body {
+ 	margin-top: 40px;
+ 	background: #eee;
+ }
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
 
+ .form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

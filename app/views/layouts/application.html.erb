@@ -40,10 +40,12 @@
     </div>
 <% end %>
 <div class="container"><%= yield %></div>
+<% if admin? %>
 <div id="footer">
-      <div class="container">
-        <p class="text-muted">&copy; Riffdiktator.com 2014</p>
-      </div>
-    </div>
+  <div class="container">
+    <p class="text-muted">&copy; Riffdiktator.com 2014</p>
+  </div>
+</div>
+<% end %>
 </body>
 </html>
